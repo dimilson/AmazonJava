@@ -1,5 +1,9 @@
 package com.example.demoAmazon.repositorios;
 
-public interface ProdutoRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.demoAmazon.model.Produto;
+
+public interface ProdutoRepository extends JpaRepository<Produto, Integer> {
 
 }
