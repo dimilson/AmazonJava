@@ -32,6 +32,16 @@ public class Carrinho {
 	public Carrinho() {
 		
 	}
+	
+	
+
+	public Integer getId() {
+		return id;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
 
 	public List<Produto> getProduto() {
 		return produto;
