@@ -35,6 +35,9 @@ public class Cliente {
 	@Column
 	private String telefone;
 	
+	@Column
+	private Carrinho carrinho;
+	
 	
 	public Cliente()
 	{
