@@ -40,6 +40,16 @@ public class Produto {
 	public Produto() {
 		
 	}
+	
+	
+
+	public Produto(String nome, Double preco) {
+		super();
+		this.nome = nome;
+		this.preco = preco;
+	}
+
+
 
 	public String getNome() {
 		return nome;
