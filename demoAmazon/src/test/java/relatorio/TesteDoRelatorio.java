@@ -27,9 +27,9 @@ public class TesteDoRelatorio {
 
 
 		// imprimir 400.0
-		System.out.println(maiorPrecoEsperado == relatorio.getMaiorPreco());
+		System.out.println(maiorPrecoEsperado.equals( relatorio.getMaiorPreco()));
 		// imprimir 250.0
-		System.out.println(menorPrecoEsperado == relatorio.getMenorPreco());
+		System.out.println(menorPrecoEsperado.equals( relatorio.getMenorPreco()));
 	}
 
 }
