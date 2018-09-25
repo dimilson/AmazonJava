@@ -1,4 +1,4 @@
-package controllers;
+package com.example.demoAmazon.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
