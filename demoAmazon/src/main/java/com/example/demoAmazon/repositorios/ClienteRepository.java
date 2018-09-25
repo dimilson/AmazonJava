@@ -10,6 +10,6 @@ import com.example.demoAmazon.model.Cliente;
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Integer>{
 	
-	List <Cliente> findByNome(String nome);
+	List <Cliente> findByNomeContainingIgnoreCase(String nome);
 
 }
