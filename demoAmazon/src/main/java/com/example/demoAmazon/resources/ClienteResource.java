@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demoAmazon.model.Cliente;
@@ -48,6 +49,18 @@ public class ClienteResource {
 		public void delete(@PathVariable("id") Integer id) {
 			clienteRepository.deleteById(id);
 		}
+		
+		
+		@GetMapping("/pesquisar")
+		public List<Cliente> pesquisar(@RequestParam("nome") String nome){
+			
+			List <Cliente> clientes = clienteRepository.findByNome(nome);
+			
+			return clientes;
+			
+		}
+		
+	
 
 
 	}
