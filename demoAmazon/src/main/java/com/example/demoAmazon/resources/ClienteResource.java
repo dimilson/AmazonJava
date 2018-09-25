@@ -54,7 +54,7 @@ public class ClienteResource {
 		@GetMapping("/pesquisar")
 		public List<Cliente> pesquisar(@RequestParam("nome") String nome){
 			
-			List <Cliente> clientes = clienteRepository.findByNome(nome);
+			List <Cliente> clientes = clienteRepository.findByNomeContainingIgnoreCase(nome);
 			
 			return clientes;
 			
