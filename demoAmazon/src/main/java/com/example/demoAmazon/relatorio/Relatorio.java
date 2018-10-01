@@ -36,7 +36,8 @@ public class Relatorio {
 					return 0;
 			}
 		});
-		produtosMaisCaros = produtosMaisCaros.subList(0, 3);
+		produtosMaisCaros = produtosMaisCaros.subList(0,
+				produtosMaisCaros.size() > 3 ? 3 : produtosMaisCaros.size());
 		
 	}
 

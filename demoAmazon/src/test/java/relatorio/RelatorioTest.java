@@ -3,6 +3,7 @@ package relatorio;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import com.example.demoAmazon.model.Produto;
@@ -12,19 +13,28 @@ import static org.junit.Assert.assertEquals;
 
 public class RelatorioTest {
 	
-	@Test
-	public void deveEncontrarOMaiorEMenorPrecoDosProdutoEmOrdemCrescente() {
+	private Relatorio relatorio;
+	private List<Produto> produtos;
+	
+	@Before
+	public void criarEntidadesParaTestes() {
 		
 		Produto celular = new Produto("Moto G500", 250.0);
 		Produto tv = new Produto("Samsung HD", 300.0);
 		Produto dvd = new Produto("CCE DVD", 400.0);
 
-		List<Produto> produtos = new ArrayList<>();
+	    produtos = new ArrayList<>();
 		produtos.add(celular);
 		produtos.add(tv);
 		produtos.add(dvd);
+		
+	}
+	
+	@Test
+	public void deveEncontrarOMaiorEMenorPrecoDosProdutoEmOrdemCrescente() {
 
-		Relatorio relatorio = new Relatorio();
+		relatorio = new Relatorio();
+
 		relatorio.gerarRelatorioPrecos(produtos);
 		
 		Double maiorPrecoEsperado = 400.0;
@@ -34,25 +44,13 @@ public class RelatorioTest {
 		
 		assertEquals(menorPrecoEsperado, relatorio.getMenorPreco());
 
-		
 	}
 	
 	@Test
 	public void deveEncontrarOMaiorEMenorPrecoDosProdutoEmOrdemDecrescente() {
 		
-		
-		Produto dvd = new Produto("CCE DVD", 400.0);
-		Produto tv = new Produto("Samsung HD", 300.0);
-		Produto celular = new Produto("Moto G500", 250.0);
-		
+		relatorio = new Relatorio();
 
-		List<Produto> produtos = new ArrayList<>();
-		produtos.add(dvd);
-		produtos.add(tv);
-		produtos.add(celular);
-		
-
-		Relatorio relatorio = new Relatorio();
 		relatorio.gerarRelatorioPrecos(produtos);
 		
 		Double maiorPrecoEsperado = 400.0;
@@ -65,20 +63,9 @@ public class RelatorioTest {
 	
 	@Test
 	public void deveMostrarEmOrdemAleatoriaOMaiorEMenorPrecoDosProdutos() {
-		
-		
-		Produto tv = new Produto("Samsung HD", 300.0);
-		Produto dvd = new Produto("CCE DVD", 400.0);
-		Produto celular = new Produto("Moto G500", 250.0);
-		
 
-		List<Produto> produtos = new ArrayList<>();
-		produtos.add(dvd);
-		produtos.add(tv);
-		produtos.add(celular);
-		
+		relatorio = new Relatorio();
 
-		Relatorio relatorio = new Relatorio();
 		relatorio.gerarRelatorioPrecos(produtos);
 		
 		Double maiorPrecoEsperado  = 400.0;
@@ -92,16 +79,9 @@ public class RelatorioTest {
 	
 	@Test
 	public void deveMostrarOMaiorEMenorPrecoComApenasUmProduto() {
-		
-		
-		Produto tv = new Produto("Samsung HD", 300.0);
-		
-		
 
-		List<Produto> produtos = new ArrayList<>();
-		produtos.add(tv);		
+		relatorio = new Relatorio();
 
-		Relatorio relatorio = new Relatorio();
 		relatorio.gerarRelatorioPrecos(produtos);
 		
 		Double maiorPrecoEsperado  = 300.0;
@@ -114,19 +94,12 @@ public class RelatorioTest {
 	
 	@Test
 	public void deveEncontrarOsTresProdutosMaisCaros() {
-		
-		Produto caneta = new Produto("Caneta Bik", 1.50);
-		Produto celular = new Produto("Moto G500", 250.0);
-		Produto tv = new Produto("Samsung HD", 300.0);
-		Produto dvd = new Produto("CCE DVD", 400.0);
+	
+		relatorio = new Relatorio();
 
-		List<Produto> produtos = new ArrayList<>();
+		Produto caneta = new Produto("Caneta Bik", 1.50);
 		produtos.add(caneta);
-		produtos.add(celular);
-		produtos.add(tv);
-		produtos.add(dvd);
 		
-		Relatorio relatorio = new Relatorio();
 		relatorio.gerarRelatorioPrecos(produtos);
 		
 		List<Produto> top3ProdutosMaisCaros = relatorio.getProdutosMaisCaros();
@@ -136,7 +109,7 @@ public class RelatorioTest {
 		assertEquals(new Double (300.0), top3ProdutosMaisCaros.get(1).getPreco());
 		assertEquals(new Double (250.0), top3ProdutosMaisCaros.get(2).getPreco());
 
-
+		
 	}
 
 }
