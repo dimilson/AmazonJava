@@ -19,6 +19,7 @@ public class RelatorioTest {
 	@Before
 	public void criarEntidadesParaTestes() {
 		
+		relatorio = new Relatorio();
 		Produto celular = new Produto("Moto G500", 250.0);
 		Produto tv = new Produto("Samsung HD", 300.0);
 		Produto dvd = new Produto("CCE DVD", 400.0);
