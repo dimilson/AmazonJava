@@ -18,7 +18,7 @@ public class ClienteController {
 	ClienteRepository clienteRepository;
 	
 	
-	@GetMapping(value = "/cliente")
+	@GetMapping(value = "/list")
 	public String listCliente (ModelMap model) {
 		List<Cliente> clientes = clienteRepository.findAll();
 		model.addAttribute("clienteList", clientes);

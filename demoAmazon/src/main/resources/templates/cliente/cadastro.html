@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Titan</title>
+    <link rel="shortcut icon" href="img/logo.jpeg">
+    <link href="cssn/css/cadastro.css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="cssn/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="cssn/css/round-about.css" rel="stylesheet">
+      
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+      
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+      <style>
+          body{
+              color: white;
+              background-color: #292828;
+          }
+           ul{
+            margin-top: 3%;
+        }
+      
+
+      </style>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+           <img src="img/Titan.png" width="20%">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <h5><a class="nav-link" href="index.html">Início </a></h5>
+            </li>
+
+            <li class="nav-item">
+              <h5><a class="nav-link active" href="cadastro.html">Cadastrar</a></h5>
+            </li>
+            
+               <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+          <h5>Categorias</h5>
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="casaecozinha.html">Casa e Cozinha</a>
+        <a class="dropdown-item" href="produtosInfo.html">Informática e Acessórios</a>
+        <a class="dropdown-item" href="produtoselet.html">Eletrônicos, TV e Audio</a>
+        <a class="dropdown-item" href="produtosgames.html">Games e Consoles</a>
+        <a class="dropdown-item" href="produtoslivros.html">Livros</a>
+        <a class="dropdown-item" href="produtospapelaria.html">Papelaria e Escritório</a>
+      </div>
+    </li>
+	         <li class="nav-item">
+              <h5><a class="nav-link" href="login.html">Login</a></h5>
+            </li>
+  
+             <li class="nav-item">
+
+              <a class="nav-link" href="carrinho.html">
+                
+                 	<i class="fas fa-cart-plus" style="font-size:150%"></i>
+              </a>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  
+
+
+    <img src="img/pes.jpg" style="opacity: 0.2; position: absolute; width: 100%; height: 100%; position: fixed;">
+
+    <div class="form">
+    <h1 style="padding: 5%;">Faça o seu cadastro gratuitamente!</h1>
+         <div class="formulario">
+    
+  <form>
+     <div class="form-group">
+        <label for="nome">Nome completo:</label>
+        <input type="text" class="form-control" id="nome" placeholder="Nome completo">
+      </div>
+      <div class="form-group">
+        <label for="estado">Estado:</label>
+        <input type="text" class="form-control" id="estado" placeholder="Estado" >
+      </div>
+      <div class="form-group">
+        <label for="cidade">Cidade:</label>
+        <input type="text" class="form-control" id="cidade" placeholder="Cidade" >
+      </div>
+       <div class="form-group">
+        <label for="cep">CEP:</label>
+        <input type="number" class="form-control" id="cep" placeholder="CEP" >
+      </div>
+      <div class="form-group">
+        <label for="bairro">Bairro:</label>
+        <input type="name" class="form-control" id="bairro" placeholder="Bairro">
+      </div>
+       <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="number" class="form-control" id="telefone" placeholder="Telefone" >
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" class="form-control" id="email" placeholder="E-mail" >
+      </div>
+      <div class="form-group">
+        <label for="pwd">Senha:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Senha">
+      </div>
+
+      <div class="checkbox">
+        <label><input type="checkbox">Lembre de mim</label>
+          <a href="login.html" style="margin-left: 5%;">Já possui cadastro? Faça login</a>
+      </div>
+      <button type="submit" class="btn btn-default">Cadastrar</button>
+
+</form>
+    </div>
+      </div>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Corporação Titã &copy; Seu Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
