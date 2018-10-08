@@ -104,7 +104,7 @@
     <h1 style="padding: 5%;">Faça o seu cadastro gratuitamente!</h1>
          <div class="formulario">
     
-  <form>
+  <form method="POST" th:object="${clienteobj}">
      <div class="form-group">
         <label for="nome">Nome completo:</label>
         <input type="text" class="form-control" id="nome" placeholder="Nome completo">
