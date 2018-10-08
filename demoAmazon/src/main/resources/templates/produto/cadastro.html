@@ -104,7 +104,7 @@
     <h1 style="padding: 5%;">Faça o seu cadastro gratuitamente!</h1>
          <div class="formulario">
     
-  <form method="POST" th:object="${produtoobj}">
+  <form method="POST">
      <div class="form-group">
         <label for="nome">Nome:</label>
         <input type="text" class="form-control" id="nome" placeholder="Nome completo">
@@ -130,14 +130,16 @@
           <a href="login.html" style="margin-left: 5%;">Já possui cadastro? Faça login</a>
       </div>
       <button type="submit" class="btn btn-default">Cadastrar</button>
+      
+      <h4>
+			<a href="/usuario/list">
+				Listar produtos
+			</a>
+		</h4>
 
 </form>
     </div>
       </div>
-
-
-
-
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
