@@ -31,7 +31,7 @@ public class ProdutoController {
 	@RequestMapping(value = "/cadastrar", method = RequestMethod.GET)
 	public String form() {
 
-		return "produto/cadastrar";
+		return "produto/cadastro";
 	}
 	
 	@RequestMapping(value = "/cadastrar", method = RequestMethod.POST)
