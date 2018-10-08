@@ -66,9 +66,13 @@
 			<thead>
 			<tr>
 			
-			<th>id</th>
-			 <th>nome</th>
+			<th>Id</th>
+			 <th>Nome</th>
+			 <th>Endereço</th>
+			 <th>Email</th>
+			 <th>Telefone</th>
 			 
+						 
 			</tr>
 			</thead>
 			<tbody>
@@ -76,10 +80,16 @@
 				
 				<td th:text="${a.id}"></td>
 				<td th:text="${a.nome}"></td>
-				
+				<td th:text="${a.enderecos.get(0).getEstado}"></td>
+				<td th:text="${a.email}"></td>
+				<td th:text="${a.telefone}"></td>	
 				</tr>
 			</tbody>
 		</table>
+		<h3 class="title">
+			<a href="/cliente/cadastro">Cadastrar Novo cliente?</a>
+		</h3>
+		
 		</div>
 	</div>
 </div>
