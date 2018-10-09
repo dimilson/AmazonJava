@@ -40,6 +40,12 @@ public class Cliente {
 	private Carrinho carrinho;
 	
 	
+	
+	
+	public Integer getId() {
+		return id;
+	}
+
 	public Cliente()
 	{
 		
