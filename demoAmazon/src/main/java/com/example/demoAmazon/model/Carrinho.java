@@ -23,8 +23,7 @@ public class Carrinho {
 	@GeneratedValue
 	private Integer id ;
 	
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name = "codigo")
+	@OneToMany(mappedBy = "carrinho",cascade=CascadeType.ALL)
 	private List<Produto> produto = new ArrayList<Produto>();
 	
 	@OneToOne

@@ -34,6 +34,7 @@ public class Produto {
 	private Double preco;
 	
 	@ManyToOne
+	@JoinColumn(name = "id")
 	private Carrinho carrinho;
 	
 	
